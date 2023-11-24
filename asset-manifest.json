@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.b1bf70d1.css",
-    "main.js": "/static/js/main.cc29da37.js",
+    "main.css": "/static/css/main.891d8710.css",
+    "main.js": "/static/js/main.a4210f73.js",
     "static/js/787.83fee7a7.chunk.js": "/static/js/787.83fee7a7.chunk.js",
     "static/media/l2r.gif": "/static/media/l2r.d17548a641742c7b64ff.gif",
-    "static/media/Thesis_v17_ENG.pdf": "/static/media/Thesis_v17_ENG.f47b4e1e4f4d62d11ab5.pdf",
     "static/media/mario.gif": "/static/media/mario.8c26528f7648974d0d6f.gif",
     "static/media/AIM.gif": "/static/media/AIM.8bb7db5aeb7a8a470c98.gif",
+    "static/media/FLATLAND_logo.png": "/static/media/FLATLAND_logo.3a66334afda83fbffbb7.png",
+    "static/media/EdgeSRGAN_logo.png": "/static/media/EdgeSRGAN_logo.4dba31582a75dfc5af4b.png",
+    "static/media/MineRL_logo.png": "/static/media/MineRL_logo.e5ac5cb03d46f5f620b4.png",
+    "static/media/CityLearn_logo.png": "/static/media/CityLearn_logo.09426bca07114cffd5f5.png",
+    "static/media/Vocals2Song_logo.png": "/static/media/Vocals2Song_logo.ace3ee8d22f178b1a8a8.png",
     "static/media/home-main.png": "/static/media/home-main.21c0161712dba1b91ace.png",
-    "static/media/SR.jpg": "/static/media/SR.07e9a0589d947cb3e309.jpg",
-    "static/media/singer.png": "/static/media/singer.8b3cc736bf67155f43ed.png",
+    "static/media/PokeDCGAN_logo.png": "/static/media/PokeDCGAN_logo.f1f0f25c27aad5b5bc8d.png",
     "static/media/about.svg": "/static/media/about.1c3a2d96b01977d93c5314c9e6b6e332.svg",
-    "static/media/CV_Antonio_Guillen.pdf": "/static/media/CV_Antonio_Guillen.593bf9f5272de8029191.pdf",
-    "static/media/minerl.jpg": "/static/media/minerl.edc466c935c7b114cee2.jpg",
+    "static/media/logo4.png": "/static/media/logo4.269ac51324fa1e0aaf3f.png",
     "static/media/pre.svg": "/static/media/pre.67ee115e4f33175c24bc.svg",
     "index.html": "/index.html",
-    "static/media/logo.svg": "/static/media/logo.ec597b804de6664eb72843717bfa7095.svg",
-    "main.b1bf70d1.css.map": "/static/css/main.b1bf70d1.css.map",
-    "main.cc29da37.js.map": "/static/js/main.cc29da37.js.map",
+    "main.891d8710.css.map": "/static/css/main.891d8710.css.map",
+    "main.a4210f73.js.map": "/static/js/main.a4210f73.js.map",
     "787.83fee7a7.chunk.js.map": "/static/js/787.83fee7a7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1bf70d1.css",
-    "static/js/main.cc29da37.js"
+    "static/css/main.891d8710.css",
+    "static/js/main.a4210f73.js"
   ]
 }
