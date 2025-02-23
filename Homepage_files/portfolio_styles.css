@@ -1,14 +1,18 @@
 body {
-  color: #333; /* Dark gray for text for better readability */
-  background: #f9f9f9; /* Light background to reduce eye strain */
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.5;
+  color: #333;
 }
-
+h1, h2, h3 {
+  margin-top: 1em;
+}
 .personal_profile__BdQI4 {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 960px) {
@@ -60,6 +64,8 @@ body {
   padding: 0.5rem; /* Easier clickability */
   border-radius: 15px; /* Soften edges */
   transition: background-color 0.3s; /* Smooth transition for interaction */
+  margin-right: 15px;
+  
 }
 
 .personal_links__p_eYL span a:hover {
@@ -83,8 +89,8 @@ body {
 }
 
 .personal_portrait__BAkO0 {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 
@@ -108,6 +114,7 @@ body {
 .publication_title__3m6SE {
   display: block;
   font-size: large;
+  font-weight: bold;
 }
 
 .publication_title__3m6SE a:not(a[href]) {
@@ -116,7 +123,7 @@ body {
 
 .publication_authors__qkFXc {
   font-size: 1.1rem;
-  color: #777;
+  color: #555;
 }
 
 .publication_authors__qkFXc > span:not(:last-of-type):after {
@@ -124,7 +131,7 @@ body {
 }
 
 .publication_authors__qkFXc a {
-  color: #777;
+  color: #555;
 }
 
 .publication_hilightedAuthor__KiWMY a {
@@ -247,9 +254,17 @@ body {
   font-size: 1rem;
   margin-top: 3em;
   padding: 2rem 0; /* Added padding */
+  border-top: 1px solid #ccc;
 
 }
-
+ul {
+  list-style: inside disc;
+  margin-left: 0;
+  padding-left: 1em;
+}
+li {
+  margin-bottom: 10px;
+}
 .styles_footer__3qp3V p {
   margin: .5rem;
 }
