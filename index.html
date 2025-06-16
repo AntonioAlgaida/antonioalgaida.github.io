@@ -39,6 +39,8 @@
                         <a href="https://github.com/antonio-guillenperez" target="_blank">GitHub (HPE)</a>
                         <a href="https://scholar.google.com/citations?user=BFS6jXwAAAAJ" target="_blank">Scholar</a>
                         <a href="https://www.linkedin.com/in/antonioguillenperez/" target="_blank">LinkedIn</a>
+                        <button id="theme-toggle" title="Toggle dark/light mode">🌙</button>
+
                     </nav>
                 </div>
             </div>
@@ -261,5 +263,41 @@
             <p>Contact: antonio_algaida [at] hotmail [dot] com
         </footer>
     </div>
+
+<!-- ADD THIS SCRIPT AT THE END OF YOUR HTML BODY -->
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // This function runs when the button is clicked
+    themeToggle.addEventListener('click', () => {
+        // Add or remove the .dark-mode class from the body
+        body.classList.toggle('dark-mode');
+
+        // Check if dark mode is now active and save the choice
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+            themeToggle.textContent = '☀️'; // Change icon to sun
+        } else {
+            localStorage.setItem('theme', 'light');
+            themeToggle.textContent = '🌙'; // Change icon to moon
+        }
+    });
+
+    // This code runs when the page first loads
+    // It checks if the user previously chose a theme
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.textContent = '☀️';
+        } else {
+            themeToggle.textContent = '🌙';
+        }
+    });
+</script>
+
+</body>
+</html>
 </body>
 </html>
