@@ -1,15 +1,52 @@
+/* --- CSS Variables for Theme Colors --- */
+:root { /* Light theme variables (default) */
+    --background-color-primary: #f8f9fa;
+    --background-color-secondary: #ffffff;
+    --text-color-primary: #212529;
+    --text-color-secondary: #6c757d;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+    --border-color: #dee2e6;
+    --heading-color: #212529;
+    --shadow-color: rgba(0,0,0,0.1);
+    --button-bg-color: #f8f9fa;
+    --button-border-color: #dee2e6;
+    --button-hover-bg-color: #007bff;
+    --button-hover-color: #ffffff;
+    --code-bg-color: #e9ecef; /* For potential code blocks */
+    --code-text-color: #343a40;
+}
+
+.dark-mode { /* Dark theme variables (override defaults) */
+    --background-color-primary: #121212;
+    --background-color-secondary: #1e1e1e;
+    --text-color-primary: #ffffff;
+    --text-color-secondary: #bbb;
+    --link-color: #80bfff;
+    --link-hover-color: #addbff;
+    --border-color: #333;
+    --heading-color: #ffffff;
+    --shadow-color: rgba(0,0,0,0.5);
+    --button-bg-color: #1e1e1e;
+    --button-border-color: #333;
+    --button-hover-bg-color: #007bff; /* Keep blue for hover */
+    --button-hover-color: #ffffff;
+    --code-bg-color: #2c2c2c;
+    --code-text-color: #e0e0e0;
+}
+
 /* --- Global Styles & Typography --- */
 body {
     font-family: 'Inter', sans-serif; /* A clean, modern sans-serif font */
     line-height: 1.6;
-    background-color: #f8f9fa; /* A very light grey background */
-    color: #343a40; /* A dark grey for text, softer than pure black */
+    background-color: var(--background-color-primary);
+    color: var(--text-color-secondary); /* Use secondary for general body text */
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 900px; /* Limits the width for better readability on large screens */
+    max-width: 1000px; /* Limits the width for better readability on large screens */
     margin: 0 auto; /* Centers the content */
     padding: 20px;
 }
@@ -17,11 +54,11 @@ body {
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif; /* A strong, clean font for headings */
     font-weight: 700;
-    color: #212529; /* A slightly darker heading color */
+    color: var(--heading-color);
 }
 
 h2 {
-    border-bottom: 2px solid #e9ecef; /* A subtle line under section headings */
+    border-bottom: 2px solid var(--code-bg-color); /* A subtle line under section headings */
     padding-bottom: 10px;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -50,8 +87,8 @@ a:hover {
     width: 150px;
     height: 150px;
     border-radius: 50%; /* Makes the photo circular */
-    border: 4px solid #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 4px solid var(--background-color-secondary); /* Border matches card background */
+    box-shadow: 0 4px 10px var(--shadow-color);
     margin-bottom: 20px;
 }
 
@@ -87,12 +124,12 @@ a:hover {
 .project-card {
     display: flex;
     flex-direction: column; /* Mobile first */
-    background-color: #ffffff;
-    border: 1px solid #dee2e6;
+    background-color: var(--background-color-secondary);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 25px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px var(--shadow-color); /* Adjust shadow for light/dark */
 }
 
 .project-visual {
@@ -102,7 +139,7 @@ a:hover {
 .project-visual img, .project-visual video {
     width: 100%;
     border-radius: 6px;
-    border: 1px solid #e9ecef;
+    border: 1px solid var(--code-bg-color);
 }
 
 .project-info h3 {
@@ -118,7 +155,7 @@ a:hover {
 
 .skill-category {
     background-color: #ffffff;
-    border: 1px solid #dee2e6;
+    border: 1px solid var(--button-border-color);
     border-radius: 8px;
     padding: 20px;
 }
@@ -136,8 +173,8 @@ footer {
     text-align: center;
     margin-top: 50px;
     padding-top: 20px;
-    border-top: 1px solid #e9ecef;
-    color: #6c757d;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-color-secondary);
     font-size: 0.9rem;
 }
 
@@ -179,7 +216,7 @@ footer {
 
 .publication-item {
     background-color: #ffffff;
-    border: 1px solid #dee2e6;
+    border: 1px solid var(--button-border-color);
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
@@ -197,13 +234,11 @@ footer {
 
 .pub-authors {
     font-size: 0.9rem;
-    color: #6c757d;
 }
 
 .pub-venue {
     font-style: italic;
     font-size: 0.9rem;
-    color: #495057;
 }
 
 .pub-links a {
@@ -220,7 +255,7 @@ footer {
 /* Style the Header Links to look more like buttons */
 #header .links a {
     display: inline-block;
-    border: 1px solid #dee2e6;
+    border: 1px solid var(--button-border-color);
     padding: 8px 15px;
     border-radius: 20px;
     margin: 5px;
@@ -235,10 +270,13 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
 }
 
+.visual-caption, .pub-authors, .pub-venue {
+    color: var(--text-color-secondary);
+}
+
 /* Add a caption style for project visuals */
 .visual-caption {
     font-size: 0.9rem;
-    color: #6c757d;
     margin-top: 10px;
     font-style: italic;
     text-align: center;
@@ -404,21 +442,24 @@ footer {
 
 /* Style for the theme toggle button */
 #theme-toggle {
-    background: none;
-    border: 1px solid #dee2e6;
+    background-color: var(--button-bg-color); /* Match background */
+    border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 8px 12px;
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    color: var(--text-color-primary); /* Icon color */
+
 }
 #theme-toggle:hover {
-    background-color: #f8f9fa;
+    background-color: var(--button-hover-bg-color);
+    color: var(--button-hover-color);
     transform: translateY(-2px);
 }
 
 .dark-mode #theme-toggle {
-    border-color: #dee2e6;
+    border-color: var(--button-border-color);
 }
 .dark-mode #theme-toggle:hover {
     background-color: #333;
@@ -451,4 +492,172 @@ footer {
 /* --- Dark Mode Specific Styles for Publication titles --- */
 .dark-mode .pub-title {
     color: #f5f5f5; /* Ensure publication titles are clearly visible */
+}
+
+/* --- Dark Mode Specific Styles for the Modal --- */
+.dark-mode .modal-content {
+    background-color: var(--background-color-secondary); /* Ensures it picks up dark mode secondary bg */
+    color: var(--text-color); /* Use the general text color for content */
+    box-shadow: 0 5px 15px var(--shadow-color); /* Darker shadow for dark mode */
+}
+
+.dark-mode .modal-content h3 {
+    color: var(--text-color-primary); /* Ensure heading is bright in dark mode */
+}
+
+.dark-mode .modal-grid .gif-item .visual-caption {
+    color: var(--text-color-secondary); /* Ensure individual GIF captions are readable */
+}
+
+.dark-mode .visual-caption-overall {
+    color: var(--text-color-secondary); /* Ensure overall caption is readable */
+}
+
+.dark-mode .close-button {
+    color: var(--text-color-secondary); /* Ensure close button is visible */
+}
+
+.dark-mode .close-button:hover,
+.dark-mode .close-button:focus {
+    color: var(--link-color); /* Match link hover in dark mode */
+}
+
+.gif-comparison-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+    justify-content: space-around; /* Distributes items evenly */
+    gap: 10px; /* Space between GIFs */
+    margin-bottom: 10px; /* Space before the overall caption */
+}
+
+.gif-item {
+    flex: 1 1 30%; /* Allows items to grow/shrink, minimum 30% width */
+    max-width: 32%; /* Ensure no more than 3 per row on wide screens */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack image and caption vertically */
+    align-items: center; /* Center align image and caption */
+}
+
+.gif-item img {
+    max-width: 100%; /* Make images responsive within their container */
+    height: auto;
+    border-radius: 8px; /* Optional: adds rounded corners to GIFs */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: subtle shadow */
+    margin-bottom: 5px; /* Space between GIF and its caption */
+}
+
+.gif-item .visual-caption {
+    font-size: 0.85em; /* Smaller font for individual GIF captions */
+    color: var(--text-color-secondary);
+}
+
+.visual-caption-overall {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+    color: var(--text-color-secondary);
+    margin-top: 10px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .gif-item {
+        flex: 1 1 48%; /* 2 per row on medium screens */
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gif-item {
+        flex: 1 1 98%; /* 1 per row on small screens */
+        max-width: 98%;
+    }
+}
+
+/* Styling for the Modal / Lightbox */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity - dark overlay */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal.active {
+    display: flex; /* Show when active */
+}
+
+.modal-content {
+    background-color: var(--background-color-secondary); /* Match your secondary background */
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    max-width: 90%; /* Max width of the modal content */
+    max-height: 90%; /* Max height of the modal content */
+    overflow-y: auto; /* Scroll if content exceeds height */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    color: var(--text-color);
+}
+
+.modal-content h3 {
+    text-align: center;
+    color: var(--text-color-primary);
+    margin-bottom: 20px;
+}
+
+.modal-grid {
+    /* Ensure even distribution for rows */
+    justify-content: center; /* Center items if less than 3 on a row */
+    align-items: flex-start; /* Align captions at the top if heights vary */
+}
+
+.modal-grid .gif-item {
+    flex: 1 1 30%; /* Allow 2 items per row, with some gap */
+    max-width: 30%; /* Max width for each item within a 2-column layout */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    /* You might want to remove 'min-width' for the modal-grid .gif-item 
+       or ensure it's not conflicting */
+}
+
+.modal-grid .gif-item img {
+    max-width: 80%;
+    height: auto; /* Allow image to scale */
+}
+
+/* Close Button */
+.close-button {
+    color: var(--text-color-secondary);
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above content */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--primary-color); /* Highlight on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Custom cursor for clickable GIF grids */
+.gif-comparison-grid-trigger {
+    cursor: zoom-in; /* Changes cursor to a magnifying glass with a '+' */
+}
+
+/* Optional: If you want to also add a slight visual effect on hover */
+.gif-comparison-grid-trigger:hover {
+    opacity: 0.9; /* Slightly dim the grid to show it's interactive */
+    transition: opacity 0.2s ease-in-out; /* Smooth transition */
 }

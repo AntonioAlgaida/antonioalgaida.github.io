@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antonio Guillen-Perez | AI Research & Engineering</title>
-    <meta name="description" content="Portfolio of Antonio Guillen-Perez, Ph.D. AI Research & Engineering specializing in Reinforcement Learning, Multi-Agent Systems, and Large-Scale Simulation.">
+    <meta name="description" content="Portfolio of Antonio Guillen-Perez, Ph.D. AI Research & Engineering specializing in Reinforcement Learning, Autonomous Systems, Multi-Agent Systems, and Large-Scale Simulation.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,6 +78,89 @@
             </section>
             <section id="projects">
                 <h2>Featured Projects</h2>
+
+                <!-- NEW PROJECT CARD 1: From Imitation to Optimization -->
+                <div class="project-card">
+                    <div class="project-visual">
+                        <!-- Make the whole grid clickable -->
+                        <div class="gif-comparison-grid-trigger" 
+                            data-project-id="imit_opt" 
+                            data-title="From Imitation to Optimization: Qualitative Comparison"
+                            data-overall-caption="Qualitative comparison of Behavioral Cloning baselines vs. robust Offline RL (CQL) agent.">
+                            <div class="gif-comparison-grid">
+                                <div class="gif-item">
+                                    <img src="assets/images/BCtoCQL/bcs_rollout.gif" alt="BC-S Agent failing to control">
+                                    <p class="visual-caption"><strong>BC-S (MLP)</strong>: Fails due to complex interactions.</p>
+                                </div>
+                                <div class="gif-item">
+                                    <img src="assets/images/BCtoCQL/bct_rollout.gif" alt="BC-T Agent circling failure">
+                                    <p class="visual-caption"><strong>BC-T (Transformer)</strong>: Brittle, leads to "circling" failure.</p>
+                                </div>
+                                <div class="gif-item">
+                                    <img src="assets/images/BCtoCQL/cql_rollout.gif" alt="CQL Agent robust control success">
+                                    <p class="visual-caption"><strong>CQL (Offline RL)</strong>: Robust recovery, successfully navigates.</p>
+                                </div>
+                            </div>
+                            <p class="visual-caption-overall">Qualitative comparison of Behavioral Cloning baselines vs. robust Offline RL (CQL) agent. (Click to expand)</p>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>From Imitation to Optimization: Offline Learning for Autonomous Driving</h3>
+                        <p>Pioneered an end-to-end pipeline applying state-of-the-art Offline Reinforcement Learning (CQL) to the Waymo Open Motion Dataset, demonstrating significantly superior robustness over Behavioral Cloning baselines for long-horizon AV control.</p>
+                        <b>My Key Contributions:</b>
+                        <ul>
+                            <li>Engineered a robust, parallelized data processing pipeline for the Waymo Open Motion Dataset.</li>
+                            <li>Conducted rigorous comparative study, demonstrating CQL's 3.2x higher success rate and 7.4x lower collision rate over Transformer-based BC.</li>
+                            <li>Designed an effective multi-objective reward function for Offline RL training in autonomous driving.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://arxiv.org/abs/2508.07029" target="_blank">[Paper]</a>
+                            <a href="https://github.com/AntonioAlgaida/WaymoOfflineRL" target="_blank">[GitHub]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW PROJECT CARD 2: Mining the Long Tail -->
+                <div class="project-card">
+                    <div class="project-visual">
+                        <div class="gif-comparison-grid-trigger" 
+                            data-project-id="imit_opt" 
+                            data-title="From Imitation to Optimization: Qualitative Comparison"
+                            data-overall-caption="Qualitative comparison of Behavioral Cloning baselines vs. robust Offline RL (CQL) agent.">
+                            <div class="gif-comparison-grid">
+                                <div class="gif-item">
+                                    <img src="assets/images/longtailgifs/video_1.gif" alt="Baseline CQL Agent failing a merge">
+                                    <p class="visual-caption"><strong>Baseline CQL</strong>: Collision in merge scenario.</p>
+                                </div>
+                                <div class="gif-item">
+                                    <img src="assets/images/longtailgifs/video_2.gif" width="300" alt="Heuristic Agent suboptimal merge">
+                                    <p class="visual-caption"><strong>Heuristic-Weighted</strong>: Suboptimal, reactive merge.</p>
+                                </div>
+                                <div class="gif-item">
+                                    <img src="assets/images/longtailgifs/video_3.gif" width="300" alt="Uncertainty Agent successful merge">
+                                    <p class="visual-caption"><strong>Uncertainty-Weighted</strong>: Proactive, successful merge.</p>
+                                </div>
+                            </div>
+                            <p class="visual-caption-overall">Qualitative comparison of data curation strategies in a challenging highway merge.</p>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Mining the Long Tail: Data Curation for Robust Offline RL in AVs</h3>
+                        <p>Systematically investigated six data curation strategies (heuristic, uncertainty, behavior-based) to tackle the long-tail problem in autonomous driving, achieving nearly a three-fold reduction in collision rate with uncertainty-based methods.</p>
+                        <b>My Key Contributions:</b>
+                        <ul>
+                            <li>Developed novel, data-driven criticality metrics (e.g., model disagreement via ensemble scouts) for non-uniform data sampling.</li>
+                            <li>Designed specialized PyTorch `Dataset` implementations for timestep and scenario-level weighting.</li>
+                            <li>Conducted large-scale comparative study demonstrating all curation methods significantly outperform uniform sampling.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://arxiv.org/abs/2508.18397" target="_blank">[Paper]</a>
+                            <a href="https://github.com/AntonioAlgaida/LongTailOfflineRL" target="_blank">[GitHub]</a>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="project-card">
                     <div class="project-visual">
                         <img src="assets/images/AIM.gif" alt="Animation of autonomous vehicles at an intersection">
@@ -165,11 +248,11 @@
                     <div class="skill-category">
                         <h3>Reinforcement & Decision Science</h3>
                         <ul>
-                            <li><strong>Foundations:</strong> Sequential Decision-Making, MDPs, Multi-Objective Optimization</li>
-                            <li><strong>Paradigms:</strong> Deep RL, Multi-Agent RL (MARL), Hierarchical RL (HRL), Imitation Learning (IL), Behavioral Cloning (BC), Learning from Demonstrations (LfD)</li>
-                            <li><strong>Algorithms:</strong> Policy Gradient (PPO, A2C), Value-Based (SAC, TD3, Q-Learning)</li>
-                            <li><strong>Techniques:</strong> Model-Based RL, Off-Policy Learning, Exploration Strategies (Epsilon-Greedy, Thompson Sampling)</li>
-                            <li><strong>Applications:</strong> Reward Function Design, Policy Optimization, RLHF</li>
+                            <li><strong>Foundations:</strong> Sequential Decision-Making, MDPs, Multi-Objective Optimization, Credit Assignment</li>
+                            <li><strong>Paradigms:</strong> Deep RL, Multi-Agent RL (MARL), Hierarchical RL (HRL), Imitation Learning (IL), Behavioral Cloning (BC), Learning from Demonstrations (LfD), <strong>Offline Reinforcement Learning (Offline RL)</strong></li>
+                            <li><strong>Algorithms:</strong> Policy Gradient (PPO, A2C), Value-Based (SAC, TD3, Q-Learning, <strong>Conservative Q-Learning - CQL</strong>)</li>
+                            <li><strong>Techniques:</strong> Model-Based RL, Off-Policy Learning, Exploration Strategies, <strong>Reward Function Design & Shaping</strong>, Policy Optimization, RLHF, <strong>Data-Centric RL (Curation, Sampling, Weighting)</strong></li>
+                            <li><strong>Applications:</strong> Autonomous Driving Planning, Behavior Prediction, Robot Control, System Optimization</li>
                         </ul>
                     </div>
                     
@@ -188,18 +271,18 @@
                     <div class="skill-category">
                         <h3>High-Performance ML Engineering</h3>
                         <ul>
-                            <li><strong>Distributed Systems:</strong> Large-Scale Training (Ray: RLlib, Tune), Parallel Computing</li>
-                            <li><strong>Infrastructure:</strong> Scalable ML Pipelines, MLOps Concepts, HPC Environments</li>
-                            <li><strong>Performance:</strong> Model Evaluation & Benchmarking, Debugging, Performance Profiling</li>
+                            <li><strong>Distributed Systems:</strong> Large-Scale Training (Ray: RLlib, Tune), Parallel Computing, Distributed Data Processing</li>
+                            <li><strong>Infrastructure:</strong> Scalable ML Pipelines, MLOps Concepts, HPC Environments, High-Throughput Data Loaders</li>
+                            <li><strong>Performance:</strong> Model Evaluation & Benchmarking, Debugging Large ML Codebases, Performance Profiling</li>
                         </ul>
                     </div>
                     
                     <div class="skill-category">
                         <h3>Simulation & Embodied AI</h3>
                         <ul>
-                            <li><strong>Environment Development:</strong> Digital Twins, World Models (Gymnasium, PettingZoo)</li>
-                            <li><strong>Robotics Concepts:</strong> Motion & Behavioral Planning, Control Systems, Perception Pipeline</li>
-                            <li><strong>Tools & Data:</strong> Physics Simulators (SUMO, CARLA), Synthetic Data Generation</li>
+                            <li><strong>Environment Development:</strong> Digital Twins, World Models, (Gymnasium, PettingZoo), <strong>Waymax Simulator</strong></li>
+                            <li><strong>Robotics Concepts:</strong> Motion & Behavioral Planning, Control Systems, Perception Pipeline, Trajectory Prediction, Safety & Robustness</li>
+                            <li><strong>Tools & Data:</strong> Physics Simulators (SUMO, CARLA), <strong>Waymo Open Motion Dataset (WOMD)</strong>, Synthetic Data Generation, Real-World Data Integration, Large-Scale Datasets</li>
                         </ul>
                     </div>
 
@@ -211,7 +294,7 @@
                         </div>
                         <div class="tier">
                             <h4>Proficient With</h4>
-                            <p>NumPy, Pandas, Scikit-learn, Stable Baselines3, Docker, Git, Linux, C++ (Basic)</p>
+                            <p>NumPy, Pandas, Scikit-learn, Stable Baselines3, Docker, Git, Linux, <strong>Waymo Open Motion Dataset (WOMD)</strong>, <strong>Waymax</strong>, C++ (Basic)</p>
                         </div>
                     </div>
                 </div>
@@ -220,6 +303,26 @@
             <section id="publications">
                 <h2>Selected Publications</h2>
                 <div class="publication-list">
+                    <div class="publication-item">
+                        <p class="pub-title">From Imitation to Optimization: A Comparative Study of Offline Learning for Autonomous Driving</p>
+                        <p class="pub-authors"><strong>A. Guillen-Perez</strong></p>
+                        <p class="pub-venue"><em>arXiv preprint, July 2025</em></p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2508.07029" target="_blank">[Paper]</a>
+                            <a href="https://github.com/AntonioAlgaida/WaymoOfflineRL" target="_blank">[GitHub]</a>
+                        </div>
+                    </div>
+                    <!-- NEW PUBLICATION 2 -->
+                    <div class="publication-item">
+                        <p class="pub-title">Mining the Long Tail: A Comparative Study of Data-Centric Criticality Metrics for Robust Offline Reinforcement Learning in Autonomous Motion Planning</p>
+                        <p class="pub-authors"><strong>A. Guillen-Perez</strong></p>
+                        <p class="pub-venue"><em>arXiv preprint, Aug 2025</em></p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2508.18397" target="_blank">[Paper]</a>
+                            <a href="https://github.com/AntonioAlgaida/LongTailOfflineRL" target="_blank">[GitHub]</a>
+                        </div>
+                    </div>
+
                     <div class="publication-item">
                         <p class="pub-title">SustainDC: Benchmarking for Sustainable Data Center Control</p>
                         <p class="pub-authors">A. Naug*, <strong>A. Guillen-Perez</strong>*, R. Luna Gutierrez*, V. Gundecha, et al.</p>
@@ -260,11 +363,25 @@
         </main>
         <footer>
             <p>© 2025 Antonio Guillen-Perez. Built with love using HTML and CSS.</p>
-            <p>Last updated: June 2025</p>
+            <p>Last updated: Sept 2025</p>
             <p>Contact: antonio_algaida [at] hotmail [dot] com
         </footer>
     </div>
 
+
+<!-- The Modal / Lightbox Structure -->
+<div id="imageModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3 id="modal-title"></h3>
+        <div id="modal-gif-grid" class="gif-comparison-grid modal-grid">
+            <!-- GIFs will be dynamically loaded here -->
+        </div>
+        <p id="modal-overall-caption" class="visual-caption-overall"></p>
+    </div>
+</div>
+
+    
 <!-- ADD THIS SCRIPT AT THE END OF YOUR HTML BODY -->
 <script>
     const themeToggle = document.getElementById('theme-toggle');
@@ -294,6 +411,65 @@
             themeToggle.textContent = '☀️';
         } else {
             themeToggle.textContent = '🌙';
+        }
+    });
+</script>
+
+<script>
+    // --- Lightbox / Modal Logic ---
+    const modal = document.getElementById("imageModal");
+    const closeButton = document.getElementsByClassName("close-button")[0];
+    const gifTriggers = document.querySelectorAll(".gif-comparison-grid-trigger");
+    const modalGifGrid = document.getElementById("modal-gif-grid");
+    const modalTitle = document.getElementById("modal-title");
+    const modalOverallCaption = document.getElementById("modal-overall-caption");
+
+    gifTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function() {
+            const projectId = this.dataset.projectId;
+            const projectTitle = this.dataset.title;
+            const projectOverallCaption = this.dataset.overallCaption;
+
+            // Clear previous content
+            modalGifGrid.innerHTML = '';
+
+            // Populate modal title and overall caption
+            modalTitle.textContent = projectTitle;
+            modalOverallCaption.textContent = projectOverallCaption;
+
+            // Find the original gif-item elements within this trigger and clone them
+            const originalGifItems = this.querySelectorAll('.gif-item');
+            originalGifItems.forEach(item => {
+                const clonedItem = item.cloneNode(true); // Deep clone
+                // Optionally remove the individual caption from the cloned items if it's redundant in modal
+                // clonedItem.querySelector('.visual-caption').remove(); 
+                modalGifGrid.appendChild(clonedItem);
+            });
+
+            modal.classList.add('active'); // Show the modal
+            document.body.style.overflow = 'hidden'; // Prevent scrolling the background
+        });
+    });
+
+    // Close the modal when the close button is clicked
+    closeButton.addEventListener('click', function() {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Re-enable scrolling
+    });
+
+    // Close the modal when clicking outside the modal content
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close the modal with the Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape" && modal.classList.contains('active')) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
         }
     });
 </script>
