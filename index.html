@@ -49,6 +49,14 @@
             <section id="news">
                 <h2>Recent News & Highlights</h2>
                 <ul>
+                    <li>
+                        <b>[Aug 2025] New Research Stream: Advancing Autonomous Driving AI.</b>
+                        <ul>
+                            <li>Developed "Efficient Virtuoso," a state-of-the-art latent diffusion Transformer for goal-conditioned trajectory planning, achieving minADE of 0.25 on Waymo Open Motion Dataset. <a href="https://arxiv.org/abs/2509.03658" target="_blank">[Paper]</a> <a href="https://github.com/AntonioAlgaida/DiffusionTrajectoryPlanner" target="_blank">[GitHub]</a></li>
+                            <li>Submitted new research on "Mining the Long Tail" for robust Offline RL in AVs to arXiv, demonstrating significant safety improvements via data curation. <a href="https://arxiv.org/abs/2508.18397" target="_blank">[Paper]</a> <a href="https://github.com/AntonioAlgaida/LongTailOfflineRL" target="_blank">[GitHub]</a></li>
+                            <li>Submitted new research on "From Imitation to Optimization" for Offline RL in AVs to arXiv, demonstrating 3.2x higher success rates than BC baselines. <a href="https://arxiv.org/abs/2508.07029" target="_blank">[Paper]</a> <a href="https://github.com/AntonioAlgaida/WaymoOfflineRL" target="_blank">[GitHub]</a></li>
+                        </ul>
+                    </li>
                     <li><b>[Early 2025]</b> Initiated a new research stream at HPE exploring LLM-based agents for dynamic system control.</li>
                     <li><b>[Nov 2024]</b> Our work on Hierarchical RL, GreenDCC, accepted to the <b>AAAI 2025</b> Demonstration Track.</li>
                     <li><b>[Oct 2024]</b> Our MARL benchmark, SustainDC, accepted to the <b>NeurIPS 2024</b> Datasets and Benchmarks Track.</li>
@@ -79,43 +87,26 @@
             <section id="projects">
                 <h2>Featured Projects</h2>
 
-                <!-- NEW PROJECT CARD 1: From Imitation to Optimization -->
+                <!-- NEW PROJECT CARD 0: Efficient Virtuoso (Diffusion Transformer) -->
                 <div class="project-card">
                     <div class="project-visual">
-                        <!-- Make the whole grid clickable -->
-                        <div class="gif-comparison-grid-trigger" 
-                            data-project-id="imit_opt" 
-                            data-title="From Imitation to Optimization: Qualitative Comparison"
-                            data-overall-caption="Qualitative comparison of Behavioral Cloning baselines vs. robust Offline RL (CQL) agent.">
-                            <div class="gif-comparison-grid">
-                                <div class="gif-item">
-                                    <img src="assets/images/BCtoCQL/bcs_rollout.gif" alt="BC-S Agent failing to control">
-                                    <p class="visual-caption"><strong>BC-S (MLP)</strong>: Fails due to complex interactions.</p>
-                                </div>
-                                <div class="gif-item">
-                                    <img src="assets/images/BCtoCQL/bct_rollout.gif" alt="BC-T Agent circling failure">
-                                    <p class="visual-caption"><strong>BC-T (Transformer)</strong>: Brittle, leads to "circling" failure.</p>
-                                </div>
-                                <div class="gif-item">
-                                    <img src="assets/images/BCtoCQL/cql_rollout.gif" alt="CQL Agent robust control success">
-                                    <p class="visual-caption"><strong>CQL (Offline RL)</strong>: Robust recovery, successfully navigates.</p>
-                                </div>
-                            </div>
-                            <p class="visual-caption-overall">Qualitative comparison of Behavioral Cloning baselines vs. robust Offline RL (CQL) agent. (Click to expand)</p>
-                        </div>
+                        <!-- Use the compelling qualitative comparison image -->
+                        <img src="assets\images\virtuoso\ablation_row4.png" alt="Qualitative comparison of goal representations in diffusion model">
+                        <p class="visual-caption">Our Sparse Route model (right) generates highly precise unbiased trajectories, outperforming other goal representations.</p>
                     </div>
                     <div class="project-info">
-                        <h3>From Imitation to Optimization: Offline Learning for Autonomous Driving</h3>
-                        <p>Pioneered an end-to-end pipeline applying state-of-the-art Offline Reinforcement Learning (CQL) to the Waymo Open Motion Dataset, demonstrating significantly superior robustness over Behavioral Cloning baselines for long-horizon AV control.</p>
+                        <h3>Efficient Virtuoso: Latent Diffusion Transformer for Trajectory Planning</h3>
+                        <p>Developed a state-of-the-art conditional latent diffusion model for goal-conditioned trajectory planning, achieving a \textbf{minADE of 0.25} on Waymo Open Motion Dataset. Introduced novel normalization and provided key insights into optimal goal representation for AVs.</p>
                         <b>My Key Contributions:</b>
                         <ul>
-                            <li>Engineered a robust, parallelized data processing pipeline for the Waymo Open Motion Dataset.</li>
-                            <li>Conducted rigorous comparative study, demonstrating CQL's 3.2x higher success rate and 7.4x lower collision rate over Transformer-based BC.</li>
-                            <li>Designed an effective multi-objective reward function for Offline RL training in autonomous driving.</li>
+                            <li>Pioneered a two-stage normalization pipeline for stable latent diffusion training.</li>
+                            <li>Designed a Transformer-based StateEncoder for rich scene context fusion.</li>
+                            <li>Conducted rigorous ablation on goal representation, proving multi-step routes are critical for tactical precision.</li>
+                            <li>Achieved state-of-the-art minADE of 0.25 on WOMD.</li>
                         </ul>
                         <div class="project-links">
-                            <a href="https://arxiv.org/abs/2508.07029" target="_blank">[Paper]</a>
-                            <a href="https://github.com/AntonioAlgaida/WaymoOfflineRL" target="_blank">[GitHub]</a>
+                            <a href="https://arxiv.org/abs/2509.03658" target="_blank">[Paper]</a>
+                            <a href="https://github.com/AntonioAlgaida/DiffusionTrajectoryPlanner" target="_blank">[GitHub]</a>
                         </div>
                     </div>
                 </div>
@@ -156,6 +147,47 @@
                         <div class="project-links">
                             <a href="https://arxiv.org/abs/2508.18397" target="_blank">[Paper]</a>
                             <a href="https://github.com/AntonioAlgaida/LongTailOfflineRL" target="_blank">[GitHub]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW PROJECT CARD 1: From Imitation to Optimization -->
+                <div class="project-card">
+                    <div class="project-visual">
+                        <!-- Make the whole grid clickable -->
+                        <div class="gif-comparison-grid-trigger" 
+                            data-project-id="imit_opt" 
+                            data-title="From Imitation to Optimization: Qualitative Comparison"
+                            data-overall-caption="Qualitative comparison of Behavioral Cloning baselines vs. robust Offline RL (CQL) agent.">
+                            <div class="gif-comparison-grid">
+                                <div class="gif-item">
+                                    <img src="assets/images/BCtoCQL/bcs_rollout.gif" alt="BC-S Agent failing to control">
+                                    <p class="visual-caption"><strong>BC-S (MLP)</strong>: Fails due to complex interactions.</p>
+                                </div>
+                                <div class="gif-item">
+                                    <img src="assets/images/BCtoCQL/bct_rollout.gif" alt="BC-T Agent circling failure">
+                                    <p class="visual-caption"><strong>BC-T (Transformer)</strong>: Brittle, leads to "circling" failure.</p>
+                                </div>
+                                <div class="gif-item">
+                                    <img src="assets/images/BCtoCQL/cql_rollout.gif" alt="CQL Agent robust control success">
+                                    <p class="visual-caption"><strong>CQL (Offline RL)</strong>: Robust recovery, successfully navigates.</p>
+                                </div>
+                            </div>
+                            <p class="visual-caption-overall">Qualitative comparison of Behavioral Cloning baselines vs. robust Offline RL (CQL) agent. (Click to expand)</p>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>From Imitation to Optimization: Offline Learning for Autonomous Driving</h3>
+                        <p>Pioneered an end-to-end pipeline applying state-of-the-art Offline Reinforcement Learning (CQL) to the Waymo Open Motion Dataset, demonstrating significantly superior robustness over Behavioral Cloning baselines for long-horizon AV control.</p>
+                        <b>My Key Contributions:</b>
+                        <ul>
+                            <li>Engineered a robust, parallelized data processing pipeline for the Waymo Open Motion Dataset.</li>
+                            <li>Conducted rigorous comparative study, demonstrating CQL's 3.2x higher success rate and 7.4x lower collision rate over Transformer-based BC.</li>
+                            <li>Designed an effective multi-objective reward function for Offline RL training in autonomous driving.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://arxiv.org/abs/2508.07029" target="_blank">[Paper]</a>
+                            <a href="https://github.com/AntonioAlgaida/WaymoOfflineRL" target="_blank">[GitHub]</a>
                         </div>
                     </div>
                 </div>
@@ -303,16 +335,17 @@
             <section id="publications">
                 <h2>Selected Publications</h2>
                 <div class="publication-list">
+                    <!-- NEW PUBLICATION 0 -->
                     <div class="publication-item">
-                        <p class="pub-title">From Imitation to Optimization: A Comparative Study of Offline Learning for Autonomous Driving</p>
+                        <p class="pub-title">Efficient Virtuoso: A Latent Diffusion Transformer Model for Goal-Conditioned Trajectory Planning</p>
                         <p class="pub-authors"><strong>A. Guillen-Perez</strong></p>
-                        <p class="pub-venue"><em>arXiv preprint, July 2025</em></p>
+                        <p class="pub-venue"><em>arXiv preprint, August 2025</em></p>
                         <div class="pub-links">
-                            <a href="https://arxiv.org/abs/2508.07029" target="_blank">[Paper]</a>
-                            <a href="https://github.com/AntonioAlgaida/WaymoOfflineRL" target="_blank">[GitHub]</a>
+                            <a href="https://arxiv.org/abs/2509.03658" target="_blank">[Paper]</a>
+                            <a href="https://github.com/AntonioAlgaida/DiffusionTrajectoryPlanner" target="_blank">[GitHub]</a>
                         </div>
                     </div>
-                    <!-- NEW PUBLICATION 2 -->
+                    <!-- NEW PUBLICATION 1 -->
                     <div class="publication-item">
                         <p class="pub-title">Mining the Long Tail: A Comparative Study of Data-Centric Criticality Metrics for Robust Offline Reinforcement Learning in Autonomous Motion Planning</p>
                         <p class="pub-authors"><strong>A. Guillen-Perez</strong></p>
@@ -320,6 +353,16 @@
                         <div class="pub-links">
                             <a href="https://arxiv.org/abs/2508.18397" target="_blank">[Paper]</a>
                             <a href="https://github.com/AntonioAlgaida/LongTailOfflineRL" target="_blank">[GitHub]</a>
+                        </div>
+                    </div>
+                    <!-- NEW PUBLICATION 2 -->
+                    <div class="publication-item">
+                        <p class="pub-title">From Imitation to Optimization: A Comparative Study of Offline Learning for Autonomous Driving</p>
+                        <p class="pub-authors"><strong>A. Guillen-Perez</strong></p>
+                        <p class="pub-venue"><em>arXiv preprint, July 2025</em></p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2508.07029" target="_blank">[Paper]</a>
+                            <a href="https://github.com/AntonioAlgaida/WaymoOfflineRL" target="_blank">[GitHub]</a>
                         </div>
                     </div>
 
