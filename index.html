@@ -87,12 +87,24 @@
             <section id="projects">
                 <h2>Featured Projects</h2>
 
-                <!-- NEW PROJECT CARD 0: Efficient Virtuoso (Diffusion Transformer) -->
+            <!-- NEW PROJECT CARD 0: Efficient Virtuoso (Diffusion Transformer) -->
                 <div class="project-card">
                     <div class="project-visual">
-                        <!-- Use the compelling qualitative comparison image -->
-                        <img src="assets\images\virtuoso\ablation_row4.png" alt="Qualitative comparison of goal representations in diffusion model">
-                        <p class="visual-caption">Our Sparse Route model (right) generates highly precise unbiased trajectories, outperforming other goal representations.</p>
+                        <!-- This wrapper is now smarter -->
+                        <div class="gif-comparison-grid-trigger single-image-trigger" 
+                            data-project-id="efficient_virtuoso" 
+                            data-title="Efficient Virtuoso: Goal Representation Ablation"
+                            data-overall-caption="Qualitative comparison of goal representations in a challenging turning scenario. Click to expand.">
+                            <!-- IMPORTANT: Remove the gif-comparison-grid wrapper for single images -->
+                            <!-- <div class="gif-comparison-grid"> --> 
+                                <div class="gif-item-single ">
+                                    <!-- Add a specific class to the image -->
+                                    <img src="assets\images\virtuoso\ablation_row4.png" alt="Qualitative comparison of goal representations in diffusion model" class="single-project-image">
+                                    <p class="visual-caption">Our Sparse Route model (right) generates highly unbiased precise trajectories, outperforming other goal representations.</p>
+                                </div>
+                            <!-- </div> Removed div -->
+                            <p class="visual-caption-overall">Qualitative comparison of goal representations in a challenging turning scenario. (Click to expand)</p>
+                        </div>
                     </div>
                     <div class="project-info">
                         <h3>Efficient Virtuoso: Latent Diffusion Transformer for Trajectory Planning</h3>
@@ -417,8 +429,15 @@
     <div class="modal-content">
         <span class="close-button">&times;</span>
         <h3 id="modal-title"></h3>
+        <!-- Container for grid of GIFs (for multi-item projects) -->
         <div id="modal-gif-grid" class="gif-comparison-grid modal-grid">
             <!-- GIFs will be dynamically loaded here -->
+        </div>
+        <!-- NEW Container for a single large image (for single-image projects) -->
+        <div id="modal-single-image-container">
+            <!-- Single image will be dynamically loaded here -->
+            <img id="modal-single-image" src="" alt="Project Visual">
+            <p id="modal-single-image-caption" class="visual-caption"></p>
         </div>
         <p id="modal-overall-caption" class="visual-caption-overall"></p>
     </div>
@@ -464,6 +483,9 @@
     const closeButton = document.getElementsByClassName("close-button")[0];
     const gifTriggers = document.querySelectorAll(".gif-comparison-grid-trigger");
     const modalGifGrid = document.getElementById("modal-gif-grid");
+    const modalSingleImageContainer = document.getElementById("modal-single-image-container");
+    const modalSingleImage = document.getElementById("modal-single-image");
+    const modalSingleImageCaption = document.getElementById("modal-single-image-caption");
     const modalTitle = document.getElementById("modal-title");
     const modalOverallCaption = document.getElementById("modal-overall-caption");
 
@@ -472,23 +494,43 @@
             const projectId = this.dataset.projectId;
             const projectTitle = this.dataset.title;
             const projectOverallCaption = this.dataset.overallCaption;
+            const isSingleImage = this.classList.contains('single-image-trigger'); // Check for the new class
 
             // Clear previous content
             modalGifGrid.innerHTML = '';
+            modalSingleImage.src = '';
+            modalSingleImageCaption.textContent = '';
+            modalSingleImageContainer.classList.remove('active'); // Hide single image container by default
+            modalGifGrid.classList.remove('active'); // Hide grid container by default
+
 
             // Populate modal title and overall caption
             modalTitle.textContent = projectTitle;
             modalOverallCaption.textContent = projectOverallCaption;
 
-            // Find the original gif-item elements within this trigger and clone them
-            const originalGifItems = this.querySelectorAll('.gif-item');
-            originalGifItems.forEach(item => {
-                const clonedItem = item.cloneNode(true); // Deep clone
-                // Optionally remove the individual caption from the cloned items if it's redundant in modal
-                // clonedItem.querySelector('.visual-caption').remove(); 
-                modalGifGrid.appendChild(clonedItem);
-            });
+            if (isSingleImage) {
+                // If it's a single image, grab its content
+                const originalImage = this.querySelector('.single-project-image');
+                const originalCaption = this.querySelector('.gif-item .visual-caption');
 
+                if (originalImage) {
+                    modalSingleImage.src = originalImage.src;
+                    modalSingleImage.alt = originalImage.alt;
+                    modalSingleImageContainer.classList.add('active'); // Show single image container
+                    if (originalCaption) {
+                         modalSingleImageCaption.textContent = originalCaption.textContent;
+                    }
+                }
+            } else {
+                // If it's a grid, load the grid content as before
+                const originalGifItems = this.querySelectorAll('.gif-item');
+                originalGifItems.forEach(item => {
+                    const clonedItem = item.cloneNode(true); // Deep clone
+                    modalGifGrid.appendChild(clonedItem);
+                });
+                modalGifGrid.classList.add('active'); // Show grid container
+            }
+            
             modal.classList.add('active'); // Show the modal
             document.body.style.overflow = 'hidden'; // Prevent scrolling the background
         });

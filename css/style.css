@@ -539,6 +539,11 @@ footer {
     align-items: center; /* Center align image and caption */
 }
 
+.gif-item-single {
+    flex: 1 1 100%; /* Full width for single GIF */
+    max-width: 100%;
+}   
+
 .gif-item img {
     max-width: 100%; /* Make images responsive within their container */
     height: auto;
@@ -660,4 +665,37 @@ footer {
 .gif-comparison-grid-trigger:hover {
     opacity: 0.9; /* Slightly dim the grid to show it's interactive */
     transition: opacity 0.2s ease-in-out; /* Smooth transition */
+}
+
+
+#modal-single-image-container {
+    display: none; /* Hidden by default */
+    text-align: center;
+    margin-top: 20px;
+}
+
+#modal-single-image-container.active {
+    display: block; /* Show when active */
+}
+
+#modal-single-image {
+    max-width: 100%; /* Make sure it fits the modal width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline-block spacing issues */
+    margin: 0 auto 10px auto; /* Center image and add space below */
+    border-radius: 8px; /* Consistent styling */
+}
+
+#modal-single-image-caption {
+    font-size: 1em; /* Make caption more readable in modal */
+    color: var(--text-color-secondary);
+}
+
+/* Also ensure your general gif-item has responsive image width */
+.gif-item img {
+    max-width: 100%; /* Make images responsive within their container */
+    height: auto;
+    border-radius: 8px; /* Optional: adds rounded corners to GIFs */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: subtle shadow */
+    margin-bottom: 5px; /* Space between GIF and its caption */
 }
