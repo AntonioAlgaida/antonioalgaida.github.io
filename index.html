@@ -49,7 +49,13 @@
             <section id="news">
                 <h2>Recent News & Highlights</h2>
                 <ul>
-                    <li><b>[Sept 2025]</b> Our two new benchmarks for validating complex AI systems, SustainCluster and SustainLC, accepted to the <b>NeurIPS 2025</b> Datasets and Benchmarks Track.</li>
+                    <li>
+                        <b>[Dec 2025]</b> Submitted <b>"Semantic-Drive"</b> to TMLR. A local-first, neuro-symbolic framework for mining safety-critical autonomous driving data using Reasoning VLMs.
+                        <a href="https://arxiv.org/abs/2512.12012" target="_blank">[Paper]</a>
+                        <a href="https://github.com/AntonioAlgaida/Semantic-Drive" target="_blank">[GitHub]</a>
+                        <a href="https://huggingface.co/spaces/agnprz/Semantic-Drive-Explorer" target="_blank">[Live Demo]</a>
+                    </li>
+                    <li><b>[Sept 2025]</b> Our two new benchmarks for validating complex AI systems, <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/121797" target="_blank">DCcluster-Opt (SustainCluster)</a> and <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/121589" target="_blank">LC-Opt (SustainLC)</a>, accepted to the <b>NeurIPS 2025</b> Datasets and Benchmarks Track.</li>
                     <li>
                         <b>[Aug 2025] New Research Stream: Advancing Autonomous Driving AI.</b>
                         <ul>
@@ -87,6 +93,43 @@
             </section>
             <section id="projects">
                 <h2>Featured Projects</h2>
+            
+                <!-- NEW PROJECT CARD: Semantic-Drive -->
+                <div class="project-card">
+                    <div class="project-visual">
+                        <!-- Single Image Trigger for Lightbox -->
+                        <div class="gif-comparison-grid-trigger single-image-trigger" 
+                            data-project-id="semantic_drive" 
+                            data-title="Semantic-Drive: Neuro-Symbolic Architecture"
+                            data-overall-caption="The Judge-Scout Architecture: Fusing Symbolic Grounding (YOLO) with Cognitive Analysis (VLMs) and Consensus (Judge).">
+                            
+                            <div class="gif-item-single">
+                                <!-- Ensure you save your architecture diagram as PNG in this path -->
+                                <img src="assets/images/semantic_drive/main_figure2-1.png" alt="Semantic-Drive System Architecture" class="single-project-image">
+                                <p class="visual-caption">Neuro-Symbolic "Judge-Scout" Pipeline running locally on RTX 3090.</p>
+                            </div>
+                            
+                            <p class="visual-caption-overall">System Architecture (Click to expand)</p>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Semantic-Drive: Neuro-Symbolic VLM Mining for "Dark Data"</h3>
+                        <p>Built a privacy-preserving, local-first DataOps engine to mine long-tail edge cases (e.g., erratic VRUs, sensor failures) from raw video logs. Implemented a "System 2" inference strategy using <strong>YOLOE-11</strong> for grounding and <strong>Qwen/Mistral</strong> for reasoning.</p>
+                        <b>My Key Contributions:</b>
+                        <ul>
+                            <li>Designed a <strong>Neuro-Symbolic architecture</strong> that reduces VLM hallucinations by 51% via "Skepticism Policy" prompting.</li>
+                            <li>Implemented an <strong>Explicit Outcome Reward Model</strong> for inference-time consensus (Best-of-N search).</li>
+                            <li>Operationalized the WOD-E2E taxonomy into a structured JSON schema for automated causal analysis.</li>
+                            <li>Released a full open-source stack (Streamlit UI) that runs on consumer hardware.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://arxiv.org/abs/2512.12012" target="_blank">[Paper]</a>
+                            <a href="https://github.com/AntonioAlgaida/Semantic-Drive" target="_blank">[Code]</a>
+                            <a href="https://huggingface.co/spaces/agnprz/Semantic-Drive-Explorer" target="_blank">[Live Demo]</a>
+                            <a href="https://huggingface.co/datasets/agnprz/semantic-drive-results" target="_blank">[Dataset]</a>
+                        </div>
+                    </div>
+                </div>
 
             <!-- NEW PROJECT CARD 0: Efficient Virtuoso (Diffusion Transformer) -->
                 <div class="project-card">
@@ -124,7 +167,7 @@
                     </div>
                 </div>
 
-                <!-- NEW PROJECT CARD 2: Mining the Long Tail -->
+                <!-- NEW PROJECT CARD 1: Mining the Long Tail -->
                 <div class="project-card">
                     <div class="project-visual">
                         <div class="gif-comparison-grid-trigger" 
@@ -164,7 +207,7 @@
                     </div>
                 </div>
 
-                <!-- NEW PROJECT CARD 1: From Imitation to Optimization -->
+                <!-- NEW PROJECT CARD 2: From Imitation to Optimization -->
                 <div class="project-card">
                     <div class="project-visual">
                         <!-- Make the whole grid clickable -->
@@ -348,6 +391,16 @@
             <section id="publications">
                 <h2>Selected Publications</h2>
                 <div class="publication-list">
+                    <!-- NEW PUBLICATION: Semantic-Drive -->
+                    <div class="publication-item">
+                        <p class="pub-title">Semantic-Drive: Democratizing Long-Tail Data Curation via Open-Vocabulary Grounding and Neuro-Symbolic VLM Consensus</p>
+                        <p class="pub-authors"><strong>A. Guillen-Perez</strong></p>
+                        <p class="pub-venue"><em>Submitted to Transactions on Machine Learning Research (TMLR), Dec 2025</em></p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2512.12012" target="_blank">[Paper]</a>
+                            <a href="https://github.com/AntonioAlgaida/Semantic-Drive" target="_blank">[GitHub]</a>
+                        </div>
+                    </div>
                     <!-- NEW PUBLICATION 0 -->
                     <div class="publication-item">
                         <p class="pub-title">Efficient Virtuoso: A Latent Diffusion Transformer Model for Goal-Conditioned Trajectory Planning</p>
@@ -419,7 +472,7 @@
         </main>
         <footer>
             <p>© 2025 Antonio Guillen-Perez. Built with love using HTML and CSS.</p>
-            <p>Last updated: September 2025</p> <!-- CHANGE THIS LINE -->
+            <p>Last updated: December 2025</p> <!-- CHANGE THIS LINE -->
             <p>Contact: antonio_algaida [at] hotmail [dot] com
         </footer>
     </div>
