@@ -34,13 +34,22 @@
                     <h1>Antonio Guillen-Perez, Ph.D.</h1>
                     <h2>AI Research & Engineering | Reinforcement Learning & Autonomous Systems</h2>
                     <nav class="links">
-                        <a href="assets/documents/Resume_AntonioGuillen.pdf" target="_blank">Resume</a>
-                        <a href="https://github.com/AntonioAlgaida" target="_blank">GitHub (Personal)</a>
-                        <a href="https://github.com/antonio-guillenperez" target="_blank">GitHub (HPE)</a>
-                        <a href="https://scholar.google.com/citations?user=BFS6jXwAAAAJ" target="_blank">Scholar</a>
-                        <a href="https://www.linkedin.com/in/antonioguillenperez/" target="_blank">LinkedIn</a>
+                        <a href="assets/documents/Resume_AntonioGuillen.pdf" target="_blank"
+                            onclick="gtag('event', 'resume_view', { 'source': 'header_link' });"
+                        >Resume</a>
+                        <a href="https://github.com/AntonioAlgaida" target="_blank"
+                            onclick="gtag('event', 'github_personal_view', { 'source': 'header_link' });"
+                        >GitHub (Personal)</a>
+                        <a href="https://github.com/antonio-guillenperez" target="_blank"
+                            onclick="gtag('event', 'github_hpe_view', { 'source': 'header_link' });"
+                        >GitHub (HPE)</a>
+                        <a href="https://scholar.google.com/citations?user=BFS6jXwAAAAJ" target="_blank"
+                            onclick="gtag('event', 'scholar_view', { 'source': 'header_link' });"
+                        >Scholar</a>
+                        <a href="https://www.linkedin.com/in/antonioguillenperez/" target="_blank"
+                            onclick="gtag('event', 'linkedin_view', { 'source': 'header_link' });"
+                        >LinkedIn</a>
                         <button id="theme-toggle" title="Toggle dark/light mode">🌙</button>
-
                     </nav>
                 </div>
             </div>
@@ -50,16 +59,42 @@
                 <h2>Recent News & Highlights</h2>
                 <ul>
                     <li>
+                        <b>[Feb 2026]</b> Released <b>"Deep-Flow"</b>, a novel unsupervised framework for AV safety validation. It leverages Optimal Transport Conditional Flow Matching on a Spectral Manifold to detect "long-tail" semantic anomalies with an AUC-ROC of 0.77.
+                        <a href="https://arxiv.org/abs/2602.17586" target="_blank"
+                           onclick="gtag('event', 'project_interest', { 'project_name': 'Deep-Flow', 'content_type': 'Paper_PDF' });">
+                           [Paper]
+                        </a>
+                        <a href="https://github.com/AntonioAlgaida/FlowMatchingTrajectoryAnomaly" target="_blank"
+                            onclick="gtag('event', 'project_interest', { 'project_name': 'Deep-Flow', 'content_type': 'GitHub_Code' });">
+                            [GitHub]
+                        </a>
+                    </li>
+                    <li>
                         <b>[Dec 2025]</b> Submitted <b>"Semantic-Drive"</b> to TMLR. A local-first, neuro-symbolic framework for mining safety-critical autonomous driving data using Reasoning VLMs.
-                        <a href="https://arxiv.org/abs/2512.12012" target="_blank">[Paper]</a>
-                        <a href="https://github.com/AntonioAlgaida/Semantic-Drive" target="_blank">[GitHub]</a>
-                        <a href="https://huggingface.co/spaces/agnprz/Semantic-Drive-Explorer" target="_blank">[Live Demo]</a>
+                        <a href="https://arxiv.org/abs/2512.12012" target="_blank"
+                           onclick="gtag('event', 'project_interest', { 'project_name': 'Semantic-Drive', 'content_type': 'Paper_PDF' });">
+                           [Paper]
+                        </a>
+                        <a href="https://github.com/AntonioAlgaida/Semantic-Drive" target="_blank"
+                            onclick="gtag('event', 'project_interest', { 'project_name': 'Semantic-Drive', 'content_type': 'GitHub_Code' });">
+                            [GitHub]
+                        </a>
+                        <a href="https://huggingface.co/spaces/agnprz/Semantic-Drive-Explorer" target="_blank"
+                            onclick="gtag('event', 'project_interest', { 'project_name': 'Semantic-Drive', 'content_type': 'Live_Demo' });">
+                            [Live Demo]
+                        </a>
                     </li>
                     <li><b>[Sept 2025]</b> Our two new benchmarks for validating complex AI systems, <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/121797" target="_blank">DCcluster-Opt (SustainCluster)</a> and <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/121589" target="_blank">LC-Opt (SustainLC)</a>, accepted to the <b>NeurIPS 2025</b> Datasets and Benchmarks Track.</li>
                     <li>
                         <b>[Aug 2025] New Research Stream: Advancing Autonomous Driving AI.</b>
                         <ul>
-                            <li>Developed "Efficient Virtuoso," a state-of-the-art latent diffusion Transformer for goal-conditioned trajectory planning, achieving minADE of 0.25 on Waymo Open Motion Dataset. <a href="https://arxiv.org/abs/2509.03658" target="_blank">[Paper]</a> <a href="https://github.com/AntonioAlgaida/DiffusionTrajectoryPlanner" target="_blank">[GitHub]</a></li>
+                            <li>Developed "Efficient Virtuoso," a state-of-the-art latent diffusion Transformer for goal-conditioned trajectory planning, achieving minADE of 0.25 on Waymo Open Motion Dataset.
+                                <a href="https://arxiv.org/abs/2509.03658" target="_blank"
+                                      onclick="gtag('event', 'project_interest', { 'project_name': 'Efficient Virtuoso', 'content_type': 'Paper_PDF' });">
+                                        [Paper]</a>
+                                <a href="https://github.com/AntonioAlgaida/DiffusionTrajectoryPlanner" target="_blank"
+                                    onclick="gtag('event', 'project_interest', { 'project_name': 'Efficient Virtuoso', 'content_type': 'GitHub_Code' });">
+                                        [GitHub]</a></li>
                             <li>Submitted new research on "Mining the Long Tail" for robust Offline RL in AVs to arXiv, demonstrating significant safety improvements via data curation. <a href="https://arxiv.org/abs/2508.18397" target="_blank">[Paper]</a> <a href="https://github.com/AntonioAlgaida/LongTailOfflineRL" target="_blank">[GitHub]</a></li>
                             <li>Submitted new research on "From Imitation to Optimization" for Offline RL in AVs to arXiv, demonstrating 3.2x higher success rates than BC baselines. <a href="https://arxiv.org/abs/2508.07029" target="_blank">[Paper]</a> <a href="https://github.com/AntonioAlgaida/WaymoOfflineRL" target="_blank">[GitHub]</a></li>
                         </ul>
@@ -93,7 +128,40 @@
             </section>
             <section id="projects">
                 <h2>Featured Projects</h2>
-            
+                <!-- NEW PROJECT CARD: Deep-Flow -->
+                <div class="project-card">
+                    <div class="project-visual">
+                        <div class="gif-comparison-grid-trigger single-image-trigger" 
+                            data-project-id="deep_flow" 
+                            data-title="Deep-Flow: Generative Safety Validation"
+                            data-overall-caption="The Spectral Manifold: Visualizing the learned probability vector field (streamlines). Safe driving (Blue) converges to the Gaussian mode, while anomalies (Red) fight the flow.">
+                            
+                            <div class="gif-item-single">
+                                <!-- Save your Figure 4 (Streamlines) as assets/images/deep_flow/manifold_vis.png -->
+                                <img src="assets/images/deep_flow/main_figure.jpg" alt="Deep-Flow Manifold Visualization" class="single-project-image">
+                                <p class="visual-caption">Manifold-Aware Flow Matching: Detecting anomalies via exact likelihood estimation.</p>
+                            </div>
+                            
+                            <p class="visual-caption-overall">Latent Flow Dynamics (Click to expand)</p>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Deep-Flow: Unsupervised Safety Validation via Conditional Flow Matching</h3>
+                        <p>Built a physics-informed generative framework to detect "unknown unknown" safety anomalies in L4 autonomous driving. Replaces brittle heuristics with <strong>Exact Log-Likelihood</strong> estimation using Optimal Transport Conditional Flow Matching (OT-CFM) on a spectral manifold.</p>
+                        <b>My Key Contributions:</b>
+                        <ul>
+                            <li>Engineered a <strong>Spectral Manifold Bottleneck (PCA-12)</strong> to enforce kinematic smoothness and enable deterministic, exact Jacobian trace computation (avoiding stochastic estimators).</li>
+                            <li>Designed a <strong>Goal-Conditioned Early Fusion Transformer</strong> with direct intent skip-connections to resolve multi-modal ambiguity at complex intersections.</li>
+                            <li>Implemented a <strong>Parallel Eager Loader</strong> to process 300k Waymo scenarios in-memory, maximizing A100/3090 GPU throughput.</li>
+                            <li>Identified the <strong>"Predictability Gap"</strong>: Proved that semantic violations (e.g., illegal turns) can be detected as statistical outliers even without high kinematic energy.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://arxiv.org/abs/2602.17586" target="_blank">[Paper]</a>
+                            <a href="https://github.com/AntonioAlgaida/FlowMatchingTrajectoryAnomaly" target="_blank">[GitHub]</a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- NEW PROJECT CARD: Semantic-Drive -->
                 <div class="project-card">
                     <div class="project-visual">
@@ -349,7 +417,7 @@
                         <ul>
                             <li><strong>LLM Agents:</strong> Agentic Frameworks, Tool Use, Planning, Fine-Tuning (PEFT, LoRA)</li>
                             <li><strong>Architectures:</strong> Transformers & Attention, CNNs (U-Net, V-Net), RNNs (LSTM)</li>
-                            <li><strong>Generative Techniques:</strong> Surrogate Modeling, Data-Driven World Models, Diffusion Models (Conceptual)</li>
+                            <li><strong>Generative Techniques:</strong> <strong>Flow Matching (CNF, OT-CFM)</strong>, Diffusion Models (DDPM), VAEs, Surrogate Modeling</li>
                             <li><strong>Frameworks:</strong> PyTorch, TensorFlow, Hugging Face Transformers</li>
                             <li><strong>Training Techniques:</strong> Transfer Learning, Fine-Tuning, Hyperparameter Optimization</li>
                             <li><strong>Evolutionary & Search Methods:</strong> Genetic Algorithms (for optimization), PSO, Bayesian Optimization</li>
@@ -391,6 +459,16 @@
             <section id="publications">
                 <h2>Selected Publications</h2>
                 <div class="publication-list">
+                    <!-- NEW PUBLICATION: Deep-Flow -->
+                    <div class="publication-item">
+                        <p class="pub-title">Conditional Flow Matching for Continuous Anomaly Detection in Autonomous Driving on a Manifold-Aware Spectral Space</p>
+                        <p class="pub-authors"><strong>A. Guillen-Perez</strong></p>
+                        <p class="pub-venue"><em>arXiv preprint, February 2026</em></p>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2602.17586" target="_blank">[Paper]</a>
+                            <a href="https://github.com/AntonioAlgaida/FlowMatchingTrajectoryAnomaly" target="_blank">[GitHub]</a>
+                        </div>
+                    </div>
                     <!-- NEW PUBLICATION: Semantic-Drive -->
                     <div class="publication-item">
                         <p class="pub-title">Semantic-Drive: Democratizing Long-Tail Data Curation via Open-Vocabulary Grounding and Neuro-Symbolic VLM Consensus</p>
@@ -472,7 +550,7 @@
         </main>
         <footer>
             <p>© 2025 Antonio Guillen-Perez. Built with love using HTML and CSS.</p>
-            <p>Last updated: December 2025</p> <!-- CHANGE THIS LINE -->
+            <p>Last updated: February 2026</p> <!-- CHANGE THIS LINE -->
             <p>Contact: antonio_algaida [at] hotmail [dot] com
         </footer>
     </div>
