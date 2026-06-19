@@ -146,6 +146,28 @@ a:hover {
     margin-top: 0;
 }
 
+.project-badge {
+    display: inline-block;
+    margin: 10px 0 0 0;
+    padding: 4px 10px;
+    color: #007bff;
+    background-color: transparent;
+    border: 1px solid #007bff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-badge:hover,
+.project-badge:focus {
+    color: #0056b3;
+    background-color: rgba(0, 123, 255, 0.08);
+    border-color: #0056b3;
+}
+
 /* --- Skills Section --- */
 .skills-grid {
     display: grid;
